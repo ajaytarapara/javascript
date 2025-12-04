@@ -187,3 +187,4 @@ function BuySell(array) {
 }
 console.log(BuySell([7, 6, 4, 3, 1]));
 
+console.log([3, 6, 5].valueOf());

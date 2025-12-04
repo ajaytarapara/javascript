@@ -46,6 +46,7 @@ function GCD(num1, num2) {
 }
 console.log(GCD(77, 22));
 
+
 //USING DIVISION
 function divGCD(num1, num2) {
   var max = Math.max(num1, num2);
@@ -158,3 +159,5 @@ function fact(num) {
   return num * fact(num - 1);
 }
 console.log(fact(5));
+
+
