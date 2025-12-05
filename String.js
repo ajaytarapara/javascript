@@ -203,7 +203,7 @@ function cmpStr(string) {
   }
   return result;
 }
-console.log(cmpStr("kkrr"));
+//console.log(cmpStr("kkrr"));
 
 function gcd(num1, num2) {
   var factor1 = [];
@@ -226,11 +226,13 @@ function gcd(num1, num2) {
   }
   return common[common.length - 1];
 }
-console.log(gcd(55, 77));
+//console.log(gcd(55, 77));
 
 const a = [0, 1, 3, 9, 7, 0];
 let c = ([...b] = [...a]);
 const n = 2;
 
-console.log(c.splice(n));
-console.log(b.splice(0, n));
+//console.log(c.splice(n));
+//console.log(b.splice(0, n));
+
+

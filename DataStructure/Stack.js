@@ -117,3 +117,68 @@ console.log(s.isEmpty()); // false
 s.pop(); // removes 5
 console.log(s.isEmpty()); // true
 console.log(s.getMin()); // undefined
+
+//using class stack
+class CLStack {
+  constructor() {
+    this.item = [];
+  }
+  push(value) {
+    this.item.push(value);
+  }
+  pop() {
+    if (this.item.length == 0) console.log("stack underflow");
+    this.item.pop();
+  }
+  isEmpty() {
+    console.log(this.item.length === 0);
+  }
+  peek() {
+    if (this.item.length == 0) return -1;
+    return this.item[this.item.length - 1];
+  }
+  print() {
+    console.log(this.item);
+  }
+}
+let classStack = new CLStack();
+classStack.print();
+classStack.push(4);
+classStack.push(5);
+classStack.push(6);
+classStack.print();
+classStack.pop();
+classStack.print();
+classStack.pop();
+classStack.pop();
+classStack.pop();
+classStack.isEmpty();
+
+class CLMinStack {
+  constructor() {
+    this.item = [];
+    this.minValues = [];
+  }
+  push(values) {
+    if (this.getMin() > values) {
+      this.minValues.push(values);
+    }
+    this.item.push(values);
+  }
+  getMin() {
+    return this.minValues[this.minValues.length - 1];
+  }
+  pop() {
+    if (this.item.length == 0) console.log("stack underflow");
+    let tempValue = this.item.pop();
+    if (tempValue == this.getMin()) {
+      this.minValues.pop();
+    }
+  }
+  print() {
+    console.log(this.item);
+    console.log(this.minValues);
+  }
+}
+
+// stack using queue
